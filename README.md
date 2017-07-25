@@ -30,7 +30,7 @@ according to the input volume and the settings selected, and sending the new
 volume to the chrome extension’s background script, which then sends a message
 to all audible tabs to adjust the sounds of the Youtube videos in open tabs.
 
-###Pop-up
+### Pop-up
 
 We included a pop-up for our chrome extension icon, as seen in popup.html. Using
 jQuery and javascript in extension.js, we added event listeners to buttons on
@@ -38,7 +38,7 @@ the pop-up so that they open the Volatility page and turn the extension on/off
 when they are clicked.  In order to turn the extension on/off, the popup must
 send a chrome message to the Volatility tab.
 
-###Getting microphone input via webpage
+### Getting microphone input via webpage
 
 Microphone input was received in main.js. Users can choose to be in focus mode
 or talking mode. In focus mode, when there’s more ambient noise, the output
@@ -49,7 +49,7 @@ two modes. This is because we needed to use different API’s for the modes’
 separate purposes. For focus mode, we needed to analyze amplitude. For talking
 mode, we needed to recognize speech.
 
-####Focus Mode
+#### Focus Mode
 To get user input in focus mode, we used the GetUserMedia function, a part of
 the WebRTC API
 (link: https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API).
@@ -69,7 +69,7 @@ We calculate the “slow” average volume by creating a queue. Every time a new
 millisecond interval passes, we add the new amplitude into the queue, and remove
 the oldest value. We then calculate and return the average of each element.
 
-####Talking Mode
+#### Talking Mode
 To get user input in talking mode, we used the Web Speech API (link:
 https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API). We used a
 “webkitSpeechRecognition” object. This object takes in microphone input and
@@ -77,7 +77,7 @@ performs speech recognition on the audio. We get the audio continuously, despite
 the 60 second time limit specified by the API, by continuously stopping and
 starting the speech recognition.
 
-###Calculating and updating the new volume
+### Calculating and updating the new volume
 
 Most of the application settings were adjusted in main.js. In order to access
 the values that users input on the Volatility page, we downloaded and
@@ -85,7 +85,7 @@ implemented JQuery as taught in class. Inside of main.js, we implemented the
 following: max/min volume settings, focus/talking mode, calibration, and
 sensitivity.
 
-####Focus Mode
+#### Focus Mode
 The new output volume is determined based on the user’s calibration values. At
 calibration, we associate their specified desired volume and the average input
 noise at the time. This average input volume is calculated in SoundMeter, which
@@ -104,7 +104,7 @@ the maximum volume variable. If the output volume is greater than max, it
 changes the volume to be max. Likewise, if it is less than the minimum variable,
 the output volume is reset to the min variable value.
 
-####Talking Mode
+#### Talking Mode
 In talking mode, only the minimum volume and desired volume during calibration
 matters. We created a “webkitSpeechRecognition” object and added event listeners
 to it. The first event listener is for when a word is recognized in speech. When
@@ -122,7 +122,7 @@ mode’s microphone input is cleared, and speech recognition begins. When the us
 switches from talking to focus mode, speech recognition is stopped and the
 stream goes back to the focus mode’s microphone input.
 
-##Adjusting video volumes of all tabs
+## Adjusting video volumes of all tabs
 
 In background.js, we receive messages from the Volatility page. Then, we compose
 new messages with the received volume as an attribute, query all audible tags in
@@ -132,7 +132,7 @@ received and adjust the volume of all the tabs by adjusting all audio tags.
 Manifest.json is a file that any chrome extension requires, which details its
 title, description, background scripts, content scripts, and browser actions.
 
-##Design
+## Design
 
 To stylize our website and popup, we used bootstrap and modified other css
 files. These files interacted with the html to make the website user-friendly
