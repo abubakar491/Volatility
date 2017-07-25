@@ -143,7 +143,10 @@ made the website and popup minimalistic and easy to use so that users can focus
 on enjoying the product’s functionality, which is an automatic volume adjuster
 for their audio.
 ## Screenshots
+Extension Popup:
 ![extension popup](https://github.com/dsmith3197/Volatility/blob/master/screenshots/Screen%20Shot%202017-07-24%20at%206.49.46%20PM.png?raw=true "Extension Popup")
+Accompanying Webpage:
+![accompanying webpage](https://github.com/dsmith3197/Volatility/blob/master/screenshots/Screen%20Shot%202017-07-24%20at%206.53.12%20PM.png?raw=true "Accompanying Webpage")
 
 ## Known Problems
 -This Chrome extension works best with headphones.  Because it uses the microphone to analyze ambient noise, music or other noise coming from your computer's speakers will artificially inflate the output levels.
