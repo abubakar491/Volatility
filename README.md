@@ -122,7 +122,7 @@ mode’s microphone input is cleared, and speech recognition begins. When the us
 switches from talking to focus mode, speech recognition is stopped and the
 stream goes back to the focus mode’s microphone input.
 
-## Adjusting video volumes of all tabs
+### Adjusting video volumes of all tabs
 
 In background.js, we receive messages from the Volatility page. Then, we compose
 new messages with the received volume as an attribute, query all audible tags in
@@ -132,7 +132,7 @@ received and adjust the volume of all the tabs by adjusting all audio tags.
 Manifest.json is a file that any chrome extension requires, which details its
 title, description, background scripts, content scripts, and browser actions.
 
-## Design
+### Design
 
 To stylize our website and popup, we used bootstrap and modified other css
 files. These files interacted with the html to make the website user-friendly
@@ -143,6 +143,7 @@ made the website and popup minimalistic and easy to use so that users can focus
 on enjoying the product’s functionality, which is an automatic volume adjuster
 for their audio.
 ## Screenshots
+![extension popup](https://github.com/dsmith3197/Volatility/blob/master/screenshots/Screen%20Shot%202017-07-24%20at%206.49.46%20PM.png?raw=true "Extension Popup")
 
 ## Known Problems
 -This Chrome extension works best with headphones.  Because it uses the microphone to analyze ambient noise, music or other noise coming from your computer's speakers will artificially inflate the output levels.
