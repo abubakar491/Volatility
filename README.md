@@ -16,6 +16,7 @@ In talking mode, Volatility will decrease your volume whenever it detects talkin
 The sensitivity preference determines how drastically the volume will change based upon ambient noise.
 ### Minimum, Maximum, Desired Volume
 These preferences are used by the algorithm along with microphone input to determine the desired volume output level.  The output level will never go below the minimum level, never go above the maximum level, and will be centered at the desired level.
-#### Screenshots
+## Screenshots
+
 ## Known Problems
 -This Chrome extension works best with headphones.  Because it uses the microphone to analyze ambient noise, music or other noise coming from your computer's speakers will artificially inflate the output levels.
