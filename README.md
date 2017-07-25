@@ -144,8 +144,12 @@ on enjoying the product’s functionality, which is an automatic volume adjuster
 for their audio.
 ## Screenshots
 Extension Popup:
+
 ![extension popup](https://github.com/dsmith3197/Volatility/blob/master/screenshots/Screen%20Shot%202017-07-24%20at%206.49.46%20PM.png?raw=true "Extension Popup")
+
+
 Accompanying Webpage:
+
 ![accompanying webpage](https://github.com/dsmith3197/Volatility/blob/master/screenshots/Screen%20Shot%202017-07-24%20at%206.53.12%20PM.png?raw=true "Accompanying Webpage")
 
 ## Known Problems
